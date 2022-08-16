@@ -1,12 +1,13 @@
 import React from "react";
+import ExpenseDate from "./ExpenseDate";
 
-const ExpenseItem = () => {
+const ExpenseItem = (data) => {
   return (
     <div>
-      <div>Date</div>
+      <ExpenseDate date={data.date} />
       <div>
-        <h2>Car Insurance</h2>
-        <div>$294.67</div>
+        <h2>{data.title}</h2>
+        <div>${data.amount}</div>
       </div>
     </div>
   );
